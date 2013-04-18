@@ -31,6 +31,11 @@ help:
 	@make build
 
 production:
+	@echo "Compiling Less"
+	@mkdir -p css
+	@recess --compile ./less/style.less > css/style.css
+	@echo "Prefixing and minifying style.css > style.min.css"
+	@prefixr -i css/style.css -c > css/style.min.css
 	@echo "\n${HR}"
 	@echo "Building wbBoiler"
 	@echo "\n${HR}"
@@ -42,11 +47,6 @@ production:
 	@jshint js/main.js
 	@echo "Min'ing JS"
 	@uglifyjs -nc js/main.js > js/main.min.js
-	@echo "Compiling Less"
-	@mkdir -p css
-	@recess --compile ./less/style.less > css/style.css
-	@echo "Prefixing and minifying style.css > style.min.css"
-	@prefixr -i css/style.css -c > css/style.min.css
 	@echo "${CHECK} Donezo at ${DATE}"
 
 clean:

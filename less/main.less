@@ -10,3 +10,192 @@ Some rules and guidelines:
 	don't abuse less nesting
 
 */
+@dark-grey: #221f20;
+@light-grey: #58595b;
+@salmon: #e73b3a;
+@gear-thin: 'geared_slabthin', serif;
+@sans: 'PT Sans', sans-serif;
+@serif: 'PT Serif', serif;
+
+
+body {
+	font-family: @sans;
+	font-size: 14px;
+	background-color: @salmon;
+	color: #fff;
+}
+
+
+#container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.section {
+	width: 100%;
+	height: 800px;
+}
+
+
+/*First Section*/
+#one {
+	background-image: url('../img/hero_bg.jpg');
+	height: auto;
+	height: 700px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	
+}
+
+	#hero {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		img {
+			margin-top: 80px;
+			margin-bottom: 70px;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+/*Second Section*/
+#two {
+	background-color: @dark-grey;
+	height: auto;
+	margin-top: 0;
+	h1 {
+		font-family: @gear-thin;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 2.3em;
+		letter-spacing: .03em;
+		color: #fff;
+		margin: 0 auto;
+		padding: 40px 6px 37px 6px;
+		text-align: center;
+	}
+}
+
+
+
+/*Third Section*/
+#three {
+	height: auto;
+	padding-bottom: 80px;
+}
+
+.subwrap {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+/*Text*/
+.p_left {
+	width: 40%;
+	min-width: 250px;
+	h3 {
+		font-family: @gear-thin;
+		text-transform: uppercase;
+		font-weight: 300;
+		color: #fff;
+		font-size: 1.8em;
+		padding-top: 20px;
+	}
+	p {
+		font-weight: 300;
+	}
+}
+
+p.identifier {
+	font-size: 1.4em;
+	font-weight: 700;
+	line-height: 1.4em;
+}
+
+
+
+/*Form*/
+.form_right {
+	width: 60%;
+	min-width: 300px;
+	form {
+		position: relative;
+	}
+}
+
+input.top {
+	float: left;
+}
+
+#email {
+	clear: both;
+}
+
+
+/*Fourth Section*/
+#four {
+	background-color: none;
+	background-image: url('../img/bg2.jpg');
+	background-size: cover;
+	background-position: fixed;
+	background-repeat: no-repeat;
+	min-height: 1200px;
+
+}
+
+#header_img {
+	width: 80%;
+	max-width: 700px;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 20px;
+	img {
+		margin-top: 50px;
+		margin-bottom: 70px;
+		height: auto;
+		width: 100%;
+	}
+	h2 {
+		font-family: @serif;
+		font-style: italic;
+		font-weight: 300;
+	}
+}
+
+/*Videos*/
+#videos {
+	width: 48%;
+	min-width: 300px;
+	float: left;
+	margin-right: 4%;
+	.hero {
+		width: 100%;
+		height: 200px;
+		background-color: #fff;
+	}
+	.subhero {
+		width: 48%;
+		background-color: #fff;
+		height: 120px;
+		float: left;
+		margin-top: 14px;
+	}
+
+	.subhero.left {
+		margin-right: 4%;
+	}
+}
+
+
+
+
+/*News*/
+#news {
+	width: 48%;
+	min-width: 300px;
+	float: left;
+}
