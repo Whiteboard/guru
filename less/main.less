@@ -10,11 +10,15 @@ Some rules and guidelines:
 	don't abuse less nesting
 
 */
+
+/*Color Mixins*/
 @dark-grey: #221f20;
 @light-grey: #58595b;
 @salmon: #e73b3a;
+
+/*Typeface Mixins*/
 @gear-thin: 'geared_slabthin', serif;
-@sans: 'PT Sans', sans-serif;
+@sans: 'Proxima Nova', sans-serif;
 @serif: 'PT Serif', serif;
 
 
@@ -42,7 +46,7 @@ body {
 #one {
 	background-image: url('../img/hero_bg.jpg');
 	height: auto;
-	height: 700px;
+	height: auto;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: fixed;
@@ -69,7 +73,7 @@ body {
 	h1 {
 		font-family: @gear-thin;
 		text-transform: uppercase;
-		font-weight: 300;
+		font-weight: normal;
 		font-size: 2.3em;
 		letter-spacing: .03em;
 		color: #fff;
@@ -100,7 +104,7 @@ body {
 	h3 {
 		font-family: @gear-thin;
 		text-transform: uppercase;
-		font-weight: 300;
+		font-weight: normal;
 		color: #fff;
 		font-size: 1.8em;
 		padding-top: 20px;
@@ -143,11 +147,12 @@ input.top {
 	background-size: cover;
 	background-position: fixed;
 	background-repeat: no-repeat;
-	min-height: 1200px;
-
+	height: auto;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
-#header_img {
+.wrapper {
 	width: 80%;
 	max-width: 700px;
 	height: auto;
@@ -163,6 +168,8 @@ input.top {
 		font-family: @serif;
 		font-style: italic;
 		font-weight: 300;
+		width: 100%;
+		border-bottom: 2px solid #fff;
 	}
 }
 
@@ -170,8 +177,10 @@ input.top {
 #videos {
 	width: 48%;
 	min-width: 300px;
-	float: left;
 	margin-right: 4%;
+	position: relative;
+	height: 600px;
+	float: left;
 	.hero {
 		width: 100%;
 		height: 200px;
@@ -190,12 +199,86 @@ input.top {
 	}
 }
 
-
-
-
 /*News*/
 #news {
 	width: 48%;
 	min-width: 300px;
+	height: 500px;
 	float: left;
+	a.more {
+		margin-top: ;
+	}
+}
+
+a.article {
+	font-family: @gear-thin;
+	font-size: 1.6em;
+	font-weight: normal;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	h4 {
+		padding-bottom: 20px;
+		margin: 0;
+	}
+	h4:after {
+		content: " >>";
+	}
+}
+
+
+/*"More" Links*/
+a.more {
+	font-family: @gear-thin;
+	font-size: 1.1em;
+	font-weight: normal;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	h4:before {
+	content: "+";
+	float: left;
+}
+}
+
+a:hover {
+	color: @salmon;
+	text-decoration: underline;
+}
+
+
+
+/*Fifth Section*/
+#five {
+	background-color: @dark-grey;
+	height: auto;
+	margin-top: -22px;
+	padding: 0;
+	h1 {
+		font-family: @gear-thin;
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 2.3em;
+		letter-spacing: .03em;
+		color: #fff;
+		text-align: center;
+		padding: 30px 6px 27px 6px;
+		float: left;
+	}
+	.wrapper {
+		padding: 0;
+	}
+}
+
+#tweetweet {
+	float: left;
+	width: 60%;
+	max-width: 400px;
+	height: auto;
+	padding: 20px 6px 20px 6px;
+	h3 {
+		font-family: @serif;
+		font-weight: normal;
+		color: #fff;
+	}
 }
