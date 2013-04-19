@@ -1077,6 +1077,7 @@ body {
 /*Text*/
 
 .p_left {
+  float: left;
   width: 40%;
   min-width: 250px;
 }
@@ -1091,7 +1092,7 @@ body {
 }
 
 .p_left p {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p.identifier {
@@ -1103,6 +1104,7 @@ p.identifier {
 /*Form*/
 
 .form_right {
+  float: left;
   width: 60%;
   min-width: 300px;
 }
@@ -1258,21 +1260,34 @@ a:hover {
 }
 
 #five .wrapper {
+  width: 90%;
   padding: 0;
 }
 
-#tweetweet {
+#tweettweet {
+  display: table;
   float: left;
-  width: 60%;
+  width: 40%;
   height: auto;
   max-width: 400px;
-  padding: 20px 6px 20px 6px;
+  min-height: 80px;
+  padding: 10px 6px 10px 6px;
+  margin-top: 20px;
+  margin-left: 30px;
+  background-color: #58595b;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-clip: padding-box;
 }
 
-#tweetweet h3 {
-  font-family: 'PT Serif', serif;
+#tweettweet h3 {
+  display: table-cell;
+  padding-left: 6px;
+  font-family: 'Proxima Nova', sans-serif;
   font-weight: normal;
   color: #fff;
+  text-align: left;
+  vertical-align: middle;
 }
 
 /*

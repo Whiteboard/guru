@@ -101,6 +101,7 @@ body {
 .p_left {
 	width: 40%;
 	min-width: 250px;
+	float: left;
 	h3 {
 		font-family: @gear-thin;
 		text-transform: uppercase;
@@ -110,7 +111,7 @@ body {
 		padding-top: 20px;
 	}
 	p {
-		font-weight: 300;
+		font-weight: 400;
 	}
 }
 
@@ -126,6 +127,7 @@ p.identifier {
 .form_right {
 	width: 60%;
 	min-width: 300px;
+	float: left;
 	form {
 		position: relative;
 	}
@@ -267,18 +269,31 @@ a:hover {
 	}
 	.wrapper {
 		padding: 0;
+		width: 90%;
 	}
 }
 
-#tweetweet {
+#tweettweet {
 	float: left;
-	width: 60%;
+	width: 40%;
 	max-width: 400px;
 	height: auto;
-	padding: 20px 6px 20px 6px;
+	min-height: 80px;
+	padding: 10px 6px 10px 6px;
+	margin-top: 20px;
+	margin-left: 30px;
+	background-color: @light-grey;
+	-webkit-border-radius: 10px;
+    border-radius: 10px;
+ 	background-clip: padding-box;
+ 	display: table;
 	h3 {
-		font-family: @serif;
+		font-family: @sans;
 		font-weight: normal;
 		color: #fff;
+		padding-left: 6px;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: left;
 	}
 }
