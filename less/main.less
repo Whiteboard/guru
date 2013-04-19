@@ -27,6 +27,7 @@ body {
 	font-size: 14px;
 	background-color: @salmon;
 	color: #fff;
+	transition: all ease-in .1s;
 }
 
 
@@ -184,7 +185,6 @@ input.top {
 	width: 48%;
 	min-width: 300px;
 	margin-right: 4%;
-	position: relative;
 	height: 600px;
 	float: left;
 	.hero {
@@ -209,11 +209,8 @@ input.top {
 #news {
 	width: 48%;
 	min-width: 300px;
-	height: 500px;
+	min-height: 500px;
 	float: left;
-	a.more {
-		margin-top: ;
-	}
 }
 
 a.article {
@@ -230,6 +227,10 @@ a.article {
 	h4:after {
 		content: " >>";
 	}
+}
+
+.first {
+	margin-top: 10px;
 }
 
 
@@ -270,6 +271,18 @@ a:hover {
 	}
 }
 
+.triangle-left {
+	.triangle-left(20px);
+	position: absolute;
+	border-right: 20px solid @light-grey;
+	margin-left: -25px;
+	margin-top: 30px;
+}
+
+.triangle-top {
+	display: none;
+}
+
 #tweettweet {
 	float: left;
 	width: 40%;
@@ -308,4 +321,55 @@ a:hover {
 	.wrapper {
 		padding-bottom: 100px;
 	}
+}
+
+
+
+
+
+/*Responsive Tweaks*/
+@media only screen and (max-width: 780px) {
+#videos, #news {
+	width: 100%;
+}
+
+#videos {
+	height: 870px;
+	.hero {
+		height: 300px;
+	}
+	.subhero {
+		height: 200px;
+		margin-top: 20px;
+	}
+}
+
+#five {
+	h1 {
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	padding-bottom: 40px;
+}
+
+#tweettweet {
+	width: 80%;
+	float: none;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.triangle-left {
+	display: none;
+}
+
+.triangle-up {
+	.triangle-up(20px);
+	position: absolute;
+	border-top: 20px solid @light-grey;
+	margin: 0 auto;
+	margin-top: -25px;
+	display: table-cell;
+}
 }

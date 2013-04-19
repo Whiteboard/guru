@@ -1005,6 +1005,7 @@ body {
   font-size: 14px;
   color: #fff;
   background-color: #e73b3a;
+  transition: all ease-in 0.1s;
 }
 
 #container {
@@ -1164,7 +1165,6 @@ input.top {
 /*Videos*/
 
 #videos {
-  position: relative;
   float: left;
   width: 48%;
   height: 600px;
@@ -1195,12 +1195,8 @@ input.top {
 #news {
   float: left;
   width: 48%;
-  height: 500px;
   min-width: 300px;
-}
-
-#news a.more {
-  margin-top: ;
+  min-height: 500px;
 }
 
 a.article {
@@ -1219,6 +1215,10 @@ a.article h4 {
 
 a.article h4:after {
   content: " >>";
+}
+
+.first {
+  margin-top: 10px;
 }
 
 /*"More" Links*/
@@ -1261,6 +1261,22 @@ a:hover {
   padding: 0;
 }
 
+.triangle-left {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: 30px;
+  margin-left: -25px;
+  border-top: 10px solid transparent;
+  border-right: 20px solid #ff0000;
+  border-right: 20px solid #58595b;
+  border-bottom: 10px solid transparent;
+}
+
+.triangle-top {
+  display: none;
+}
+
 #tweettweet {
   display: table;
   float: left;
@@ -1299,6 +1315,54 @@ a:hover {
 
 #six .wrapper {
   padding-bottom: 100px;
+}
+
+/*Responsive Tweaks*/
+
+@media only screen and (max-width: 780px) {
+  #videos,
+  #news {
+    width: 100%;
+  }
+  #videos {
+    height: 870px;
+  }
+  #videos .hero {
+    height: 300px;
+  }
+  #videos .subhero {
+    height: 200px;
+    margin-top: 20px;
+  }
+  #five {
+    padding-bottom: 40px;
+  }
+  #five h1 {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  #tweettweet {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .triangle-left {
+    display: none;
+  }
+  .triangle-up {
+    position: absolute;
+    display: table-cell;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    margin-top: -25px;
+    border-top: 20px solid #58595b;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #ff0000;
+    border-left: 10px solid transparent;
+  }
 }
 
 /*
