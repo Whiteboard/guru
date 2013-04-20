@@ -107,6 +107,7 @@ h1 {
 	width: 40%;
 	min-width: 250px;
 	float: left;
+	margin-right: 20px;
 	h3 {
 		font-family: @gear-thin;
 		text-transform: uppercase;
@@ -130,22 +131,85 @@ p.identifier {
 
 /*Form*/
 .form_right {
-	width: 60%;
-	min-width: 300px;
+	width: 50%;
+	min-width: 320px;
+	max-width: 600px;
+	min-height: 296px;
 	float: left;
-	form {
-		position: relative;
+	padding-top: 50px;
+	padding-left: 30px;
+	.row {
+		margin: 0;
+		margin-bottom: 0px;
+		width: 100%;
 	}
 }
 
-input.top {
-	float: left;
+form {
+	min-width: 280px;
+	input, textarea {
+		font-family: @sans;
+		font-size: 1.3em;
+		font-weight: 300;
+		color: lighten(@light-grey, 20%);
+		height: 30px;
+		-webkit-border-radius: 6px;
+    	border-radius: 6px;
+ 		background-clip: padding-box;
+ 		padding: 2px;
+ 		padding-left: 8px;
+ 		border: none;
+ 		overflow: scroll;
+ 		transition: all ease-in .1s;
+	}
+	textarea {
+		width: 97%;
+		min-height: 120px;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+	textarea:focus, input:focus {
+		-moz-box-shadow:    inset 0 0 10px @salmon;
+   		-webkit-box-shadow: inset 0 0 10px @salmon;
+   		box-shadow:         inset 0 0 10px @salmon;
+   		outline: none;
+	}
 }
 
-#email {
-	clear: both;
+input.name {
+	width: 40%;
 }
 
+input.email {
+	width: 55%;
+	margin-right: 0;
+}
+
+input.phone {
+	width: 55%;
+}
+
+input.company {
+	width: 40%;
+}
+
+input.submit {
+	margin-top: 10px;
+	float: right;
+	text-transform: uppercase;
+	background-color: @dark-grey;
+	color: #fff;
+	width: 100px;
+	height: 35px;
+}
+
+input.submit:hover {
+	background-color: lighten(@dark-grey, 10%);
+}
+
+input.submit:active {
+	background-color: lighten(@dark-grey, 15%);
+}
 
 /*Fourth Section*/
 #four {
@@ -329,6 +393,15 @@ a:hover {
 
 /*Responsive Tweaks*/
 @media only screen and (max-width: 780px) {
+.form_right {
+	padding-left: 0;
+}
+
+.form_right, .p_left {
+	margin: 0 auto;
+}
+
+
 #videos, #news {
 	width: 100%;
 }

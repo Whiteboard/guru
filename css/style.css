@@ -945,12 +945,12 @@ body {
 
 ::-moz-selection {
   text-shadow: none;
-  background: #b3d4fc;
+  background: #e73b3a;
 }
 
 ::selection {
   text-shadow: none;
-  background: #b3d4fc;
+  background: #e73b3a;
 }
 
 /*
@@ -1085,6 +1085,7 @@ h1 {
   float: left;
   width: 40%;
   min-width: 250px;
+  margin-right: 20px;
 }
 
 .p_left h3 {
@@ -1110,20 +1111,89 @@ p.identifier {
 
 .form_right {
   float: left;
-  width: 60%;
-  min-width: 300px;
+  width: 50%;
+  max-width: 600px;
+  min-width: 320px;
+  min-height: 296px;
+  padding-top: 50px;
+  padding-left: 30px;
 }
 
-.form_right form {
-  position: relative;
+.form_right .row {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 0;
 }
 
-input.top {
-  float: left;
+form {
+  min-width: 280px;
 }
 
-#email {
-  clear: both;
+form input,
+form textarea {
+  height: 30px;
+  padding: 2px;
+  padding-left: 8px;
+  overflow: scroll;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #8b8c8e;
+  border: none;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  transition: all ease-in 0.1s;
+  background-clip: padding-box;
+}
+
+form textarea {
+  width: 97%;
+  min-height: 120px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+form textarea:focus,
+form input:focus {
+  outline: none;
+  -webkit-box-shadow: inset 0 0 10px #e73b3a;
+     -moz-box-shadow: inset 0 0 10px #e73b3a;
+          box-shadow: inset 0 0 10px #e73b3a;
+}
+
+input.name {
+  width: 40%;
+}
+
+input.email {
+  width: 55%;
+  margin-right: 0;
+}
+
+input.phone {
+  width: 55%;
+}
+
+input.company {
+  width: 40%;
+}
+
+input.submit {
+  float: right;
+  width: 100px;
+  height: 35px;
+  margin-top: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #221f20;
+}
+
+input.submit:hover {
+  background-color: #3d3739;
+}
+
+input.submit:active {
+  background-color: #4a4346;
 }
 
 /*Fourth Section*/
@@ -1320,6 +1390,13 @@ a:hover {
 /*Responsive Tweaks*/
 
 @media only screen and (max-width: 780px) {
+  .form_right {
+    padding-left: 0;
+  }
+  .form_right,
+  .p_left {
+    margin: 0 auto;
+  }
   #videos,
   #news {
     width: 100%;

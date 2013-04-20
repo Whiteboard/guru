@@ -67,12 +67,18 @@
         </div>
         <div class="form_right">
             <form>
-                <input type="text" id="Name" class="top">
-                <input type="text" id="Email" class="top">
-                <input type="text" id="Phone" class="middle">
-                <input type="text" id="Company" class="middle">
-                <textarea id="Message"></textarea>
-                <input type="submit" value="Submit">
+                <div class="row">
+                <input type="text" class="name" onfocus="if(this.value == 'NAME') { this.value = ''; }" value="NAME" />
+                <input type="text" class="email" onfocus="if(this.value == 'EMAIL') { this.value = ''; }" value="EMAIL" />
+                </div>
+                <div class="row">
+                <input type="text" class="phone" onfocus="if(this.value == 'PHONE') { this.value = ''; }" value="PHONE" />
+                <input type="text" class="company" onfocus="if(this.value == 'COMPANY') { this.value = ''; }" value="COMPANY" />
+                </div>
+                <textarea name="message" onfocus="if(this.value == 'Message') { this.value = ''; }" value="Message">MESSAGE</textarea>
+                <div class="row">
+                <input type="submit" class="submit" value="Submit">
+                </div>  
             </form>
         </div>
         </div>
